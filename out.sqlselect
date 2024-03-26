@@ -1,0 +1,10 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT, count INTEGER);
+INSERT INTO products VALUES(1,'1213',121);
+INSERT INTO products VALUES(2,NULL,12);
+INSERT INTO products VALUES(3,NULL,0);
+INSERT INTO products VALUES(4,NULL,replace('{\n    a  1;\n    b = 2;\n}','\n',char(10)));
+INSERT INTO products VALUES(5,NULL,'{"a":1,"b":2}');
+INSERT INTO products VALUES(9,NULL,NULL);
+COMMIT;
